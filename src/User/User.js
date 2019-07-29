@@ -2,9 +2,15 @@ import React, { Component } from 'react';
 import UserDetail  from './UserDetail';
 
 export class User extends Component {
+    
+    myUserData = {
+        name : "Joe"
+    };
     render() {
-        // return (<p><UserDetail /></p>);
-        return (<p>hello</p>);
+        return (
+        <div><UserDetail userData={this.myUserData}/></div>
+        
+    );
     }
 }
 

@@ -7,6 +7,15 @@ import {SubComponent2} from './User/SubComponent2';
 
 export class App extends Component {
    number = 2;
+//    myUserData = {
+//     <div> <ul>
+//   <li>Coffee</li>
+//   <li>Tea</li>
+//   <li>Milk</li>
+// </ul>
+// </div> 
+   
+//    }
   render() {
     return (
       <div>
@@ -21,7 +30,7 @@ export class App extends Component {
       </div>
 
 
-<div className="App">
+      <div className="App">
         <p>This is the app Component</p>
         <SubComponent2 onRender={() => this.whenSubComponentRender()}></SubComponent2>
       </div>
