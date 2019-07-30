@@ -16,7 +16,7 @@ export class TimeComponent extends Component {
     render() {
         return (
             <div>
-                <button
+                <button class="btn btn-primary"
                     onClick={this.newTime}>
                     get new time
         </button>

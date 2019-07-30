@@ -23,11 +23,11 @@ export class User extends Component {
             <div>
                 <form onSubmit={this.newLocation}>
                     <label for="locationInput">Enter new location: </label>
-                    <input id="locationInput" type="text" />
+                    <input id="locationInput" class="form-control" type="text" />
                     <br />
                     <label for="nameInput">Enter new name: </label>
-                    <input id="nameInput" type="text" />
-                    <input type="submit" value="set new user" />
+                    <input id="nameInput" class="form-control" type="text" />
+                    <input class="btn btn-primary" type="submit" value="set new user" />
                 </form>
 
                 <UserDetail userName={this.state.name} userLocation={this.state.location} />
