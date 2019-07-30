@@ -4,18 +4,10 @@ import './App.css';
 import { User } from './User/User';
 import {SubComponent} from './User/SubComponent';
 import {SubComponent2} from './User/SubComponent2';
+import {TimeComponent} from './User/TimeComponent';
 
 export class App extends Component {
    number = 2;
-//    myUserData = {
-//     <div> <ul>
-//   <li>Coffee</li>
-//   <li>Tea</li>
-//   <li>Milk</li>
-// </ul>
-// </div> 
-   
-//    }
   render() {
     return (
       <div>
@@ -35,10 +27,12 @@ export class App extends Component {
         <SubComponent2 onRender={() => this.whenSubComponentRender()}></SubComponent2>
       </div>
 
+      <div className="App">
+        <p>This is the time Component</p>
+        <TimeComponent></TimeComponent>
       </div>
 
-
-
+      </div>
     );
   }
     whenSubComponentRender() {
