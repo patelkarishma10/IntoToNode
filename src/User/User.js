@@ -5,30 +5,31 @@ export class User extends Component {
     constructor(){
         super();
         this.state = {
+            name: "aName",
             location:"Salford"
         };
     }
 
     newLocation = (e) => {
-e.preventDefault();
-    this.setState ({
-        location: document.getElementById("locationInput").value
-    })
-}
+        e.preventDefault();
+        this.setState ({
+            name: document.getElementById("nameInput").value,
+            location: document.getElementById("locationInput").value
+        })
+    }
 
-    myUserData = {
-        name : "Joe",
-        location: "Salford"
-    };
     render() {
         return (
-        <div><UserDetail userData={this.myUserData}/>
+        <div>
         <form onSubmit={this.newLocation}>
             <label for="locationInput">Enter new location: </label>
             <input id="locationInput" type= "text" />
-            <input type = "submit" value="set new location"/>
+            <label for="nameInput">Enter new name: </label>
+            <input id="nameInput" type= "text" />
+            <input type="submit" value="set new user"/>
             </form>
-            <p>The location is: {this.state.location.toString()}</p>
+
+            <UserDetail userName={this.state.name} userLocation={this.state.location}/>
         </div>
         
     );

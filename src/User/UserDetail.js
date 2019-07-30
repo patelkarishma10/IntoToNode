@@ -4,7 +4,8 @@ class UserDetail extends Component {
     render() {
         return (
         <div>
-            <p>{this.props.userData.name}</p>
+            <p>location: {this.props.userLocation}</p>
+             <p>name: {this.props.userName}</p>
         </div>
         )}
 }
